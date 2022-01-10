@@ -11,12 +11,7 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,20 +23,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Screenshot](./images/Screenshot-desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github repo](https://github.com/Hade21/social-prof-section-master)
+- Live Site URL: [Github page](https://hade21.github.io/social-prof-section-master)
 
 ## My process
 
@@ -52,59 +39,175 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="rated">
+          <div class="reviews one">
+            <div class="star">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+            </div>
+            <p>Rated 5 Stars in Reviews</p>
+          </div>
+          <div class="reviews two">
+            <div class="star">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+            </div>
+            <p>Rated 5 Stars in Report Guru</p>
+          </div>
+          <div class="reviews three">
+            <div class="star">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+              <img src="./images/icon-star.svg" alt="">
+            </div>
+            <p>Rated 5 Stars in BestTech</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="card colton">
+            <div class="profile">
+              <img src="./images/image-colton.jpg" alt="" class="img-profile">
+              <p class="name">Colton Smith</p>
+              <p class="status">Verified Buyer</p>
+            </div>
+            <div class="testi">
+              <p class="statement">"We needed the same printed design as the one we had ordered a week prior.
+    Not only did they find the original order, but we also received it in time. Excellent!"</p>
+            </div>
+          </div>
+          <div class="card irene">
+            <div class="profile">
+              <img src="./images/image-irene.jpg" alt="" class="img-profile">
+              <p class="name">Irene Roberts </p>
+              <p class="status">Verified Buyer</p>
+            </div>
+            <div class="testi">
+              <p class="statement">"Customer service is always excellent and very quick turn around. Completely
+                delighted with the simplicity of the purchase and the speed of delivery."</p>
+            </div>
+          </div>
+          <div class="card anne">
+            <div class="profile">
+              <img src="./images/image-anne.jpg" alt="" class="img-profile">
+              <p class="name">Anne Wallace</p>
+              <p class="status">Verified Buyer</p>
+            </div>
+            <div class="testi">
+              <p class="statement">"Put an order with this company and can only praise them for the very high
+    standard. Will definitely use them again and recommend them to everyone!"</p>
+            </div>
+          </div>
+        </div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.rated{
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(14, 7.14%);
+    grid-template-columns: repeat(10, 10%);
+}
+.reviews{
+    background-color: hsl(300, 24%, 96%);
+    margin: 5px 0;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    width: initial;
+}
+.star{
+    margin-right: 30px;
+}
+.one{
+    grid-row: 2/5;
+    grid-column: 1/9;
+}
+.two{
+    grid-row: 5/8;
+    grid-column: 2/10;
+}
+.three{
+    grid-row: 8/11;
+    grid-column: 3/11;
+}
+.testimonial{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 32% 2% 32% 2% 32%;
+    grid-template-rows: 6% 6% 6% 64% 6% 6% 6%;
+    padding-top: 20px;
+}
+.card{
+    width: fit-content;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    padding: 30px;
+    color: hsl(0, 0%, 100%);
+    font-size: 12px;
+}
+.colton{
+    grid-column: 1/2;
+    grid-row: 1/6;
+}
+.irene{
+    grid-column: 3/4;
+    grid-row: 2/7;
+}
+.anne{
+    grid-column: 5/6;
+    grid-row: 3/8;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+    margin-bottom: 20px;
+}
+.img-profile{
+    border-radius: 50%;
+    grid-area: 1/1/3/2;
+    width: 40px;
+}
+.name{
+    grid-area: 1/2/2/3;
+    align-self: center;
+    font-weight: 700;
+    padding-left: 10px;
+}
+.status{
+    color: hsl(333, 80%, 67%);
+    grid-area: 2/2/3/3;
+    align-self: center;
+    padding-left: 10px;
+    opacity: .8;
+}
+.testi{
+    line-height: 24px;
+    /* word-spacing: 1px; */
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@Rohman](https://www.frontendmentor.io/profile/hade21)
+- LinkedIn - [Muhammad Abdurrohman](https://www.linkedin.com/in/muhammad-a-589675141/)
